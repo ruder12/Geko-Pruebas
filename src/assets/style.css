@@ -1,0 +1,20 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(135deg, rgba(46, 137, 173, 0.9), rgba(15, 79, 153, 0.9));
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 1.5em;
+}
