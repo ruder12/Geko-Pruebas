@@ -9,7 +9,7 @@ import { ACCOUNT_INITIALIZE } from '../store/actions';
 
 const TableCompany = ({ tabledata }) => {
     const sure = useSelector((state) => state.account.user?.rol);
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(null);
     const dispatcher = useDispatch();
 
     const columns = [

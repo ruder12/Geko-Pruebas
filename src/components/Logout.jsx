@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import config from '../Config/config';
 import { LOGOUT } from '../store/actions';
-import { useEffect } from 'react';
 
 const Logout = () => {
     const dispatcher = useDispatch();
@@ -17,10 +16,7 @@ const Logout = () => {
             console.error(error);
         }
     };
-    useEffect(()=>{
-        Logout()
-    })
-
+ 
     return (
         <a onClick={handleLogout}>Logout</a>
     );

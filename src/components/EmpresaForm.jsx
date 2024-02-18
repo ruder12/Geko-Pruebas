@@ -22,8 +22,6 @@ const EmpresaForm = ({data}) => {
     }
   },[])
 
-  console.log(data)
-
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setEmpresaData({ ...empresaData, [name]: value });
