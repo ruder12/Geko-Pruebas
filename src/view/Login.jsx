@@ -1,7 +1,8 @@
-import FormLogin from "../components/FormLogin";
+import AuthLogin from "../components/AuthLogin";
+
 
 const Login = ()=> {
-    return ( <FormLogin /> );
+    return ( <AuthLogin /> );
 }
 
 export default Login;

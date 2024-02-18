@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  display: flex;
+  margin: auto;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -17,4 +17,84 @@ body {
   background: linear-gradient(135deg, rgba(46, 137, 173, 0.9), rgba(15, 79, 153, 0.9));
   font-family: "Roboto", helvetica, arial, sans-serif;
   font-size: 1.5em;
+}
+
+
+
+/* botones de la tabla */
+/*=======Button============= */
+.button-container {
+  display: flex;
+  position: relative;
+}
+
+button {
+  background: #1AAB8A;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 50px;
+  font-size: 0.6em;
+  padding: 1em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  margin: 1px; /* Espacio entre botones */
+}
+
+button:hover {
+  background: #fff;
+  color: #1AAB8A;
+}
+
+button:before,
+button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #1AAB8A;
+  transition: 400ms ease all;
+}
+
+button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+.swal2-input {
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #87CEEB; /* Azul cielo */
+  color: #fff; /* Texto blanco */
+}
+
+.swal2-input:focus {
+  outline: none;
+}
+
+.swal2-confirm {
+  background-color: #007bff; /* Azul predeterminado de Bootstrap */
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.swal2-confirm:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
 }

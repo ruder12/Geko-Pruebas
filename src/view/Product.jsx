@@ -1,7 +1,9 @@
-import '../assets/style.css'
-
+import TableProduct from '../components/TableProduct';
 const Product=()=> {
-    return ( <>Product</> );
+    const  tableDataProduct = [];
+    return ( <>
+    <TableProduct tabledata={tableDataProduct}/>
+    </> );
 }
 
 export default Product;
