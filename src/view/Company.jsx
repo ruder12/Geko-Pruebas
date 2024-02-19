@@ -26,7 +26,7 @@ const Company = () => {
     useEffect(() => {
     
         fetchData();
-    },);
+    },[]);
 
 
     return ( <><TableCompany tabledata={data}/></> );

@@ -34,16 +34,16 @@ const TableCompany = ({ tabledata }) => {
             cell: row => sure ? (
                 <>
                     <ButtonsActions id={row.nit} name={"Edit"} onClick={updateCompany} />
-                    <ButtonsActions id={row.nit} name={"Delete"} onClick={deleteCompany} />
+                    <ButtonsActions id={row.id} name={"Delete"} onClick={deleteCompany} />
                 </>
             ) : null,
         },
 
     ]
 
-    const updateCompany = async (id) => {
+    const updateCompany = async (nit) => {
         try {
-            const response = await Api.get(`company/${id}`);
+            const response = await Api.get(`company/getbynit/${nit}`);
             if (response.status === 200) {
                 setData(response.data);
             }

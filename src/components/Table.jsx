@@ -24,7 +24,7 @@ Table.propTypes = {
         button: PropTypes.bool,
         cell: PropTypes.func,
     })).isRequired,
-    data: PropTypes.object,
+    data: PropTypes.arrayOf(PropTypes.object),
     
 };
 

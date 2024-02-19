@@ -10,7 +10,7 @@ const MainLayout = () => {
     <h4>{rol}</h4>
         <ul className="menu">
             {rol === config.admin ?
-                <><li><a href="/empresa" className="active">Empresa</a></li>
+                <><li><a href="/empresa">Empresa</a></li>
                     <li><a href="/inventario">Inventario</a></li>
                     <li><a href="/producto">Producto</a></li>
                 </> : ""}

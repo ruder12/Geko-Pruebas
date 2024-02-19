@@ -78,7 +78,7 @@ button:hover:after {
   padding: 12px;
   font-size: 16px;
   background-color: #87CEEB; /* Azul cielo */
-  color: #fff; /* Texto blanco */
+  color: #02071a; /* Texto blanco */
 }
 
 .swal2-input:focus {
@@ -97,4 +97,22 @@ button:hover:after {
 
 .swal2-confirm:hover {
   background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+}
+
+.select-custom {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f0f5ff;
+  border: 1px solid #a6c8ff;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.select-custom:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #a6c8ff;
 }

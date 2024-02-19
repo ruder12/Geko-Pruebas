@@ -10,6 +10,7 @@ const MySwal = withReactContent(Swal)
 
 const EmpresaForm = ({data}) => {
   const [empresaData, setEmpresaData] = useState({
+    id:0,
     nit: "",
     nombre: '',
     address: '',
@@ -17,10 +18,17 @@ const EmpresaForm = ({data}) => {
   });
 
   useEffect(() => {
-    if(data != null){
-      setEmpresaData(data);
+    if (data != null) {
+      // Asignar los datos recibidos a los campos del formulario
+      setEmpresaData({
+        id: data.id || '',
+        nit: data.nit || '',
+        nombre: data.nombre || '',
+        address: data.address || '',
+        telefono: data.telefono || ''
+      });
     }
-  },[])
+  }, [data]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -37,7 +45,6 @@ const EmpresaForm = ({data}) => {
       });
     } else {
 
-      console.log('Datos de la empresa:', empresaData);
       saveCompany(empresaData)
     }
   };
@@ -97,6 +104,7 @@ const EmpresaForm = ({data}) => {
 
 EmpresaForm.propTypes = {
   data: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     nit: PropTypes.string.isRequired,
     nombre: PropTypes.string.isRequired,
     address: PropTypes.string.isRequired,
